@@ -18,8 +18,8 @@ stderr_log_handler = logging.StreamHandler()
 app.logger.addHandler(stderr_log_handler)
 app.logger.setLevel(logging.DEBUG)
 
-sendgrid_key = app.config['sendgrid_key']
-local_secret = app.config['local_secret']
+sendgrid_key = app.config['SENDGRID_KEY']
+local_secret = app.config['LOCAL_SECRET']
 
 @app.route("/", methods=("GET",))
 def webhook_get_handler():
